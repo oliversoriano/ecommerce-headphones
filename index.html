@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <meta name="description" content="Soundbox - landing page de e-commerce de fones de ouvido sem fio.">
+    <title>Soundbox | Wireless Headphones</title>
+
+    <link rel="shortcut icon" type="image/png" href="img/iconheadset.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="imagex/png" href="img/iconheadset.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    
-    <title>Ecommerce</title>
+
+    <!-- defer: o script só roda depois que o HTML for carregado -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,49 +24,45 @@
         <a href="#" class="logo"><i class='bx bx-headphone'></i>Soundbox</a>
 
         <ul class="navegacao">
-            <li><a href="#">Visão Geral</a></li>
-            <li><a href="#">Teach Specs</a></li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Tech Specs</a></li>
             <li><a href="#">Reviews</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
 
         <div class="header-icons">
-            <i class='bx bx-cart'></i>
-            <div id="menu"><i class='bx bx-menu'></i></div>
+            <i class='bx bx-cart' aria-label="Carrinho"></i>
+            <button id="menu" aria-label="Abrir menu"><i class='bx bx-menu'></i></button>
         </div>
     </header>
 
+    <main>
+        <section class="home">
+            <div class="home-img">
+                <img src="img/product1.png" class="one" alt="Fone de ouvido sem fio">
+            </div>
 
-    <section class="home">
+            <div class="home-text">
+                <h1>Wireless <br> Headphones</h1>
+                <h5>The Smarter Way To Listen</h5>
+                <h3>$199.00</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </section>
 
-        <div class="home-img">
-            <img src="img/product1.png" class="one">
-        </div>
-
-        <div class="home-text">
-            <h1>Wireless <br> Headphones</h1>
-            <h5>The Smarter Way To Listen</h5>
-            <h3>$199.00</h3>
-            <a href="#" class="btn">Shop Now</a>
-        </div>
-
-    </section>
-
-
-    <div class="main">
-        <div class="row1">
-            <li><img src="img/iconproduct1.png" onclick="slider('img/product1.png')"></li>
-        </div>
-
-        <div class="row2">
-            <li><img src="img/iconproduct2.png" onclick="slider('img/product2.png')"></li>
-        </div>
-
-        <div class="row3">
-            <li><img src="img/iconproduct3.png" onclick="slider('img/product3.png')"></li>
-        </div>
-    </div>
-
+        <!-- Miniaturas: cada uma troca a imagem principal e a cor de destaque -->
+        <ul class="cores">
+            <li class="cor ativa" style="--cor: #34e7f8" data-img="img/product1.png">
+                <img src="img/iconproduct1.png" alt="Modelo 1">
+            </li>
+            <li class="cor" style="--cor: #ff758d" data-img="img/product2.png">
+                <img src="img/iconproduct2.png" alt="Modelo 2">
+            </li>
+            <li class="cor" style="--cor: #f8c534" data-img="img/product3.png">
+                <img src="img/iconproduct3.png" alt="Modelo 3">
+            </li>
+        </ul>
+    </main>
 
 </body>
 
